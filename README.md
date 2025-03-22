@@ -3,13 +3,13 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <a href="https://github.com/liz-durang/LearningPass">
-    <img src="https://github.com/liz-durang/LearningPass/blob/main/packages/nextjs/public/LearningPass.jpg">
+  <a href="https://github.com/liz-durang/unipay-app">
+    <img src="https://github.com/liz-durang/unipay-app/blob/main/logo-unipay-app.png">
   </a>
 
 <br/>
 <p align="center">
-  <a href="https://dorahacks.io/hackathon/aleph25/detail">Aleph Hackathon. March 21 - 23 2025</a>
+  <a href="https://dorahacks.io/hackathon/aleph25/detail">Aleph Hackathon || March 21 - 23 2025</a>
 </p>
 </div>
 
@@ -49,7 +49,7 @@ stellar keys generate --global unipay-app --network testnet --fund
 2. Compile the contract and generate the `.wasm` file.
 
 ```
-cd uipay-app
+cd unipay-app
 stellar contract build
 ```
 
@@ -63,7 +63,7 @@ stellar contract deploy \
     --alias hello_world
 ```
 
-4. On a third terminal, start your NextJS app:
+4. On a third terminal, start your Frontend app:
 
 ```
 yarn start
@@ -78,7 +78,7 @@ Run smart contract test with `yarn hardhat:test`
 Supported by:
 
 * [Rust](https://www.rust-lang.org/es/learn/get-started)
-* [ViteJs] (https://vite.dev/guide/)
+* [ViteJs](https://vite.dev/guide/)
 * [Stellar](https://developers.stellar.org/)
 
 
@@ -86,7 +86,7 @@ Supported by:
 
 -Gerardo Pedrizco ([@gerapedrizco](https://x.com/gerapedrizco): Business Developer | Economist and Co-Founder of @Cripto_UNAM
 <br />
--Liz Durán  ([@liz_durang](https://x.com/liz_durang): Product Engineer & Blockchain Developer | Promoting emerging tech education and adoption
+-Liz Durán  ([@liz_durang](https://x.com/liz_durang): Product Engineer & Blockchain Developer | Promoter of emerging tech education
 <br />
--Bruno Miranda ([@ArcusX_one](https://x.com/ArcusX_one)): Computer Science Engineer
+-Bruno Miranda ([@ArcusX_one](https://x.com/ArcusX_one): Computer Science Engineer
 <br />
