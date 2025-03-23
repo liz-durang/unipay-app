@@ -1,6 +1,6 @@
 [package]
 name = "unipay-app"
-version = "0.0.0"
+version = "1.0.0"
 edition = "2021"
 publish = false
 CONTRACT_ID="CA4CPISCLKKHPPMHFURC7S4X5RQGFRTNNXSFYMA3AGSRMJ4HB7MQOJG2"
@@ -14,3 +14,9 @@ soroban-sdk = { workspace = true }
 
 [dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
+
+stellar contract deploy \
+    --wasm target/wasm32-unknown-unknown/release/unipay_app.wasm \
+    --source unipay-app \
+    --network testnet \
+    --alias unipay-app

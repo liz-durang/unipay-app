@@ -58,13 +58,22 @@ stellar contract build
 
 ```
 stellar contract deploy \
-    --wasm target/wasm32-unknown-unknown/release/unipay-app.wasm \
+    --wasm target/wasm32-unknown-unknown/release/unipay_app.wasm \
     --source unipay-app \
     --network testnet \
-    --alias unipay-app
+    --alias unipay_app
 ```
 
-4. On a third terminal, start your Frontend app:
+4. Realize unit tests. Example:
+```
+stellar contract invoke \
+--network testnet \
+--source alice \
+--id <contract_id> \
+-- get_admin 
+```
+
+5. On a third terminal, start your Frontend app:
 
 ```
 yarn start

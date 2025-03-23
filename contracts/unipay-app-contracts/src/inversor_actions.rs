@@ -60,3 +60,4 @@ pub fn deposit(env: Env, from: Address, to: Address, amount: i128) {
     to_balance += amount;
     storage::write_recieve(&env, &to, &to_balance);
 }
+
