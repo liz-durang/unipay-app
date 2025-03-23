@@ -65,12 +65,24 @@ stellar contract deploy \
 ```
 
 4. Realize unit tests. Example:
+
 ```
 stellar contract invoke \
 --network testnet \
---source alice \
+--source unipay-app \
+--id <contract_id> \
+-- initialize \
+--admin <user_id> \
+--token <token_id>
+```
+
+```
+stellar contract invoke \
+--network testnet \
+--source unipay-app \
 --id <contract_id> \
 -- get_admin 
+
 ```
 
 5. On a third terminal, start your Frontend app:
