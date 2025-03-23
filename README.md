@@ -38,23 +38,10 @@ The current financing system is inefficient, exclusive, and bureaucratic, limiti
 ## Demo
 
 Check out our working prototype! Below are some screenshots of the app in action:
-
-<div style="display: flex; justify-content: space-between; gap: 10px;">
-  <div style="flex: 1;">
-    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
-      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 1" style="width: 50px; height: auto;">
-    </a>
-  </div>
-  <div style="flex: 1;">
-    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
-      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 2" style="width: 50px; height: auto;">
-    </a>
-  </div>
-  <div style="flex: 1;">
-    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
-      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 3" style="width: 50px; height: auto;">
-    </a>
-  </div>
+<div align="center">
+  <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
+    <img src="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8" alt="Video Link">
+  </a>
 </div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
