@@ -58,10 +58,10 @@ stellar contract build
 
 ```
 stellar contract deploy \
-    --wasm target/wasm32-unknown-unknown/release/unipay-app-contract.wasm \
+    --wasm target/wasm32-unknown-unknown/release/unipay-app.wasm \
     --source unipay-app \
     --network testnet \
-    --alias hello_world
+    --alias unipay-app
 ```
 
 4. On a third terminal, start your Frontend app:
