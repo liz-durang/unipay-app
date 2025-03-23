@@ -40,7 +40,7 @@ The current financing system is inefficient, exclusive, and bureaucratic, limiti
 Check out our working prototype! Below are some screenshots of the app in action:
 <div align="center">
   <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
-    <img src="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8" alt="Video Link">
+    Video Link
   </a>
 </div>
 
