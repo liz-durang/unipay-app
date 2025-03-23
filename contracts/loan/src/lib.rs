@@ -16,3 +16,4 @@ impl LoanContract {
         env.storage().persistent().get(&borrower).unwrap_or(0)
     }
 }
+
