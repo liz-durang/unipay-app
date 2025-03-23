@@ -3,6 +3,7 @@
 mod storage;
 mod token;
 mod types;
+mod inversor_actions;
 
 use soroban_sdk::{contract, contractimpl, Address, Env};
 

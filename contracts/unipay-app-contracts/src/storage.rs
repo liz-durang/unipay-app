@@ -1,6 +1,6 @@
 use soroban_sdk::{Address, Env};
 
-use crate::types::{Client, DataKey};
+use crate::types::{Client, DataKey, Inversor, DataKeyInversor};
 
 pub fn has_admin(env: &Env) -> bool {
     env.storage().persistent().has(&DataKey::Admin)
@@ -85,4 +85,48 @@ pub fn write_contract_balance(env: &Env, amount: &i128) {
     env.storage()
         .persistent()
         .set(&DataKey::ContractBalance, amount);
+}
+
+//
+
+pub fn write_inversor(env: &Env, inversor: &Address, data: &Inversor) {
+    env.storage()
+        .persistent()
+        .set(&DataKeyInversor::Inversor(inversor.clone()), data);
+}
+
+pub fn has_inversor(env: &Env, inversor: &Address) -> bool {
+    env.storage()
+        .persistent()
+        .has(&DataKeyInversor::Inversor(inversor.clone()))
+}
+
+pub fn has_recieve_inversor(env: &Env, recieve: &Address) -> bool {
+    env.storage()
+        .persistent()
+        .has(&DataKeyInversor::Recieve(recieve.clone()))
+}
+
+pub fn read_inversor(env: &Env, inversor: &Address) -> Inversor {
+    env.storage()
+        .persistent()
+        .get(&DataKeyInversor::Inversor(inversor.clone()))
+        .unwrap()
+}
+
+pub fn read_contract_balance_inversor(env: &Env) -> i128 {
+    env.storage()
+        .persistent()
+        .get(&DataKeyInversor::ContractBalance)
+        .unwrap_or(0)
+}
+
+pub fn read_token_inversor(env: &Env) -> Address {
+    env.storage().persistent().get(&DataKeyInversor::Token).unwrap()
+}
+
+pub fn write_token_inversor(env: &Env, token_address: &Address) {
+    env.storage()
+        .persistent()
+        .set(&DataKeyInversor::Token, &token_address);
 }

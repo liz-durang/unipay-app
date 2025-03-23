@@ -8,6 +8,7 @@
   </a>
 
 <br/>
+<br/>
 <p align="center">
   <a href="https://dorahacks.io/hackathon/aleph25/detail">Aleph Hackathon || March 21 - 23 2025</a>
 </p>
@@ -90,3 +91,5 @@ Supported by:
 <br />
 -Bruno Miranda ([@ArcusX_one](https://x.com/ArcusX_one): Computer Science Engineer
 <br />
+
+

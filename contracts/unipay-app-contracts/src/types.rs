@@ -1,4 +1,4 @@
-use soroban_sdk::{contracttype, Address};
+use soroban_sdk::{contracttype, Address, String};
 
 #[derive(Clone, PartialEq, Debug)]
 #[contracttype]
@@ -15,6 +15,29 @@ pub struct Client {
     pub status: ClientStatus,
 }
 
+
+#[derive(Clone)]
+#[contracttype]
+pub struct Inversor {
+    pub id: Address,
+    pub balance: i128,
+}
+
+#[derive(Clone)]
+#[contracttype]
+pub struct Student {
+    pub id: String, 
+    pub name: String, 
+    pub average: i128,
+    pub loan_approved: bool, 
+    pub scholarship_approved: bool,
+    pub balance: i128,
+}
+
+pub struct University {
+    pub id: String, 
+}
+
 #[derive(Clone)]
 #[contracttype]
 pub enum DataKey {
@@ -24,3 +47,14 @@ pub enum DataKey {
     Client(Address),
     Recieve(Address), // balance: i128
 }
+
+#[derive(Clone)]
+#[contracttype]
+pub enum DataKeyInversor {
+    Admin,           // Address
+    Token,           // XLM Testnet Address
+    ContractBalance, // i128
+    Inversor(Address),
+    Recieve(Address), // balance: i128
+}
+
