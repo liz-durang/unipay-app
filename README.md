@@ -36,12 +36,28 @@ The current financing system is inefficient, exclusive, and bureaucratic, limiti
 
 <!-- Demo -->
 ## Demo
-Check our project
-[![Watch demo video](https://github.com/liz-durang/unipay-app/blob/main/request-loan.png)](https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8)
 
-<a href="https://github.com/liz-durang/unipay-app">
-    <img src="https://github.com/liz-durang/unipay-app/blob/main/logo-unipay-app.png">
-  </a>
+Check out our working prototype! Below are some screenshots of the app in action:
+
+<div style="display: flex; justify-content: space-between; gap: 10px;">
+  <div style="flex: 1;">
+    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
+      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 1" style="width: 100%; max-width: 250px; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 1;">
+    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
+      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 2" style="width: 100%; max-width: 250px; height: auto;">
+    </a>
+  </div>
+  <div style="flex: 1;">
+    <a href="https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8">
+      <img src="https://github.com/liz-durang/unipay-app/blob/main/request-loan.png" alt="Demo Screenshot 3" style="width: 100%; max-width: 250px; height: auto;">
+    </a>
+  </div>
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Quickstart-->
 
