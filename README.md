@@ -37,8 +37,11 @@ The current financing system is inefficient, exclusive, and bureaucratic, limiti
 <!-- Demo -->
 ## Demo
 Check our project
-[![Watch demo video](https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8)]
+[![Watch demo video](https://github.com/liz-durang/unipay-app/blob/main/request-loan.png)](https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8)
 
+<a href="https://github.com/liz-durang/unipay-app">
+    <img src="https://github.com/liz-durang/unipay-app/blob/main/logo-unipay-app.png">
+  </a>
 
 <!-- Quickstart-->
 
