@@ -1,0 +1,188 @@
+/* Variables globales */
+:root {
+  /* Colores principales */
+  --primary-color: #2563eb;          /* Azul principal más vibrante */
+  --primary-light: #60a5fa;          /* Azul claro para hover */
+  --primary-dark: #1e40af;           /* Azul oscuro para estados activos */
+  
+  /* Colores secundarios */
+  --secondary-color: #0ea5e9;        /* Azul cielo para acentos */
+  --secondary-light: #7dd3fc;        /* Azul cielo claro */
+  --secondary-dark: #0369a1;         /* Azul cielo oscuro */
+
+  /* Colores de estado */
+  --success: #10b981;                /* Verde para éxito */
+  --success-light: #34d399;          /* Verde claro */
+  --warning: #f59e0b;                /* Amarillo para advertencias */
+  --warning-light: #fbbf24;          /* Amarillo claro */
+  --danger: #ef4444;                 /* Rojo para errores */
+  --danger-light: #f87171;           /* Rojo claro */
+
+  /* Colores de texto */
+  --text-primary: #1e293b;           /* Texto principal */
+  --text-secondary: #64748b;         /* Texto secundario */
+  --text-tertiary: #94a3b8;          /* Texto terciario */
+  --text-light: #f8fafc;            /* Texto claro */
+
+  /* Colores de fondo */
+  --bg-white: #ffffff;               /* Fondo blanco */
+  --bg-light: #f1f5f9;              /* Fondo claro */
+  --bg-lighter: #f8fafc;            /* Fondo más claro */
+  --bg-dark: #0f172a;               /* Fondo oscuro */
+
+  /* Colores de borde */
+  --border-light: #e2e8f0;          /* Borde claro */
+  --border-dark: #cbd5e1;           /* Borde oscuro */
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Otros */
+  --border-radius-sm: 0.375rem;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+  --transition: all 0.3s ease;
+}
+
+/* Estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
+}
+
+/* Layout principal */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-lighter);
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-lighter);
+}
+
+.app-main {
+  flex: 1;
+  min-height: 100vh;
+  margin-left: 280px;
+  background-color: var(--bg-lighter);
+  transition: var(--transition);
+  padding: 2rem;
+}
+
+/* Layout público */
+.public-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.public-layout main {
+  flex: 1;
+  color: var(--text-light);
+}
+
+/* Loading Screen */
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--text-light);
+}
+
+.loading-content {
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--bg-white);
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  color: var(--text-light);
+  opacity: 0.9;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-main {
+    margin-left: 240px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .app-layout {
+    flex-direction: column;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: var(--border-radius);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+} 
