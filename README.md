@@ -82,7 +82,6 @@ stellar contract invoke \
 --source unipay-app \
 --id <contract_id> \
 -- get_admin 
-
 ```
 
 5. On a third terminal, start your Frontend app:

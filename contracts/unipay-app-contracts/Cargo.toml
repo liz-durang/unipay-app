@@ -14,9 +14,3 @@ soroban-sdk = { workspace = true }
 
 [dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
-
-stellar contract deploy \
-    --wasm target/wasm32-unknown-unknown/release/unipay_app.wasm \
-    --source unipay-app \
-    --network testnet \
-    --alias unipay-app
