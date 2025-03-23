@@ -47,14 +47,3 @@ pub enum DataKey {
     Client(Address),
     Recieve(Address), // balance: i128
 }
-
-#[derive(Clone)]
-#[contracttype]
-pub enum DataKeyInversor {
-    Admin,           // Address
-    Token,           // XLM Testnet Address
-    ContractBalance, // i128
-    Inversor(Address),
-    Recieve(Address), // balance: i128
-}
-

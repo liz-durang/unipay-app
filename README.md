@@ -58,8 +58,8 @@ stellar contract build
 
 ```
 stellar contract deploy \
-    --wasm target/wasm32-unknown-unknown/release/hello_world.wasm \
-    --source alice \
+    --wasm target/wasm32-unknown-unknown/release/unipay-app-contract.wasm \
+    --source unipay-app \
     --network testnet \
     --alias hello_world
 ```
