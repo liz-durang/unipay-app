@@ -34,6 +34,12 @@ The current financing system is inefficient, exclusive, and bureaucratic, limiti
 **UniPay App** is a decentralized platform that automates scholarship distribution and provides scalable microloans tied to academic performance, removing banking intermediaries to ensure transparency, accessibility, and efficiency.
 
 
+<!-- Demo -->
+## Demo
+Check our project
+[![Watch demo video](https://www.loom.com/share/ddf44c254dea48af8ea18500959e93f8)]
+
+
 <!-- Quickstart-->
 
 ## Quickstart
