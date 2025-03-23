@@ -102,6 +102,15 @@ Supported by:
 * [ViteJs](https://vite.dev/guide/)
 * [Stellar](https://developers.stellar.org/)
 
+# Social Media
+
+Stay connected and follow us on social media for updates:
+
+- [X](https://x.com/unipay_app)
+- [Linktr.ee](https://linktr.ee/unipay_app)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Team
 

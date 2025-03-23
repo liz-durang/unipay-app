@@ -1,6 +1,6 @@
 
 [package]
-name = "loan_contract"
+name = "unipay-contracts"
 version = "0.0.0"
 edition = "2021"
 publish = false
@@ -11,7 +11,11 @@ doctest = false
 
 [dependencies]
 soroban-sdk = { workspace = true }
+loan_contract = { path = "contracts/loan" }
+scholarship_contract = { path = "contracts/scholarship" }
 
 [dev-dependencies]
 soroban-sdk = { workspace = true, features = ["testutils"] }
+
+
 

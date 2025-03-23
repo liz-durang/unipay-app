@@ -21,27 +21,6 @@ stellar contract deploy \
     --network testnet \
     --alias unipay_app
 
-
-soroban contract invoke \
-    --network testnet \
-    --source unipay-app \
-    --id CD4O5DRGU7P3UKLNWMGIKUN46HHTS4GJ7U4FQSHBRRHU3WCD5GMYMUCB \
-    --fn initialize \
-    --arg $(soroban keys address --name my-key) \
-    --arg <DIRECCION_DEL_TOKEN> \
-    --network testnet \
-    --source my-key
-
-
-//
-stellar contract invoke \
---network testnet \
---source unipay-app \
---id CAB3D4CCVAT5AHSDPKDXJMLW27245MBAL4RHEF6STFUJFSI6CFL26UU5 \
--- initialize \
---admin GCFMOGNLNJHWYQBTHEKIMZJYCAM3JTEOKIXY4VIKP6UCULPEJWYDVU5T \
---token GCFMOGNLNJHWYQBTHEKIMZJYCAM3JTEOKIXY4VIKP6UCULPEJWYDVU5T
-
 stellar contract invoke \
 --network testnet \
 --source unipay-app \
@@ -53,10 +32,23 @@ stellar contract invoke \
 stellar contract invoke \
 --network testnet \
 --source unipay-app \
---id CD4O5DRGU7P3UKLNWMGIKUN46HHTS4GJ7U4FQSHBRRHU3WCD5GMYMUCB \
--- get_admin 
+--id CAILRF4TDFDVVNTARTUUMFQBMA6NMWTHSBQICRR5TQNNXI6BMIDJO3WT \
+-- initialize_unipay \
+--admin GCFMOGNLNJHWYQBTHEKIMZJYCAM3JTEOKIXY4VIKP6UCULPEJWYDVU5T \
+--token CAS3J7GYLGXMF6TDJBBYYSE3HQ6BBSMLNUQ34T6TZMYMW2EVH34XOWMA
+
+
+
+stellar contract invoke \
+--network testnet \
+--source unipay-app \
+--id CAILRF4TDFDVVNTARTUUMFQBMA6NMWTHSBQICRR5TQNNXI6BMIDJO3WT \
+-- get_admin \
+--contract_name unipay
+
 
 //
-scholarship_contract.wasm - CD4O5DRGU7P3UKLNWMGIKUN46HHTS4GJ7U4FQSHBRRHU3WCD5GMYMUCB
-loan_contract.wasm - CDA25A53WSDCEVX6UEI2HHBANZZLBXUYHKMAV6JRP77LRYBZYLHCQODQ
-unipay_app.wasm - CD4YUA4DXU4SLVDO4NDIYSJLVERTBVPX4WDOCN3ABO4EJ2JKRJEF6S4U
+account - GCFMOGNLNJHWYQBTHEKIMZJYCAM3JTEOKIXY4VIKP6UCULPEJWYDVU5T
+scholarship_contract.wasm - CCPJSJRLUXXEBZ6LYRLGOOAJFGJMSI2O2GV4HYINV6H4GJVSVCWVHY7O
+loan_contract.wasm - CB6A5677YOAFAL5CBXKFDFASLT2TKJNC3XP3YW4JDESRGBTIF4NB2Z
+unipay_app.wasm - CAILRF4TDFDVVNTARTUUMFQBMA6NMWTHSBQICRR5TQNNXI6BMIDJO3WT

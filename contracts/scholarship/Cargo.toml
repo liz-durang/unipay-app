@@ -1,5 +1,5 @@
 [package]
-name = "loan_contract"
+name = "scholarship_contract"
 version = "0.0.0"
 edition = "2021"
 publish = false
