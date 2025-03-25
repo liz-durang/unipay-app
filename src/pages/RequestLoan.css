@@ -1,0 +1,173 @@
+.request-loan-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.loan-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(45, 50, 80, 0.1);
+}
+
+.wallet-warning,
+.scholarship-required {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(45, 50, 80, 0.1);
+}
+
+.redirect-button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.scholarship-status {
+  margin: 2rem 0;
+}
+
+.status-card {
+  background-color: var(--color-light);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status-label {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+
+.status-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.status-badge.approved {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+.loan-summary {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.summary-details {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(112, 119, 161, 0.2);
+}
+
+.summary-item.highlight {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.summary-item.total {
+  border-bottom: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.request-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.request-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 50, 80, 0.2);
+}
+
+.request-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Estilos del Modal de Aprobación */
+.loan-approval {
+  text-align: center;
+}
+
+.approval-icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.transaction-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.next-button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 50, 80, 0.2);
+}
+
+@media (max-width: 768px) {
+  .status-card {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+} 

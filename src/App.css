@@ -1,0 +1,20 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Eliminar todos los demás estilos que no se usan */
