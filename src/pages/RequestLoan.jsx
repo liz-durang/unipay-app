@@ -7,7 +7,11 @@ import './RequestLoan.css';
 function RequestLoan({ publicKey }) {
   const navigate = useNavigate();
   const [hasScholarship, setHasScholarship] = useState(false);
-  const [scholarshipAmount, setScholarshipAmount] = useState(0);
+  const [creditHistory, setCreditHistory] = useState({
+    hasHistory: false,
+    maxAmount: 100, // Monto inicial
+    paymentsOnTime: 0
+  });
   const [showModal, setShowModal] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [loanDetails, setLoanDetails] = useState({
@@ -20,20 +24,27 @@ function RequestLoan({ publicKey }) {
   });
 
   useEffect(() => {
-    checkScholarshipHistory();
+    checkEligibility();
   }, [publicKey]);
 
-  const checkScholarshipHistory = async () => {
+  const checkEligibility = async () => {
     if (!publicKey) return;
     
     try {
-      // Aquí verificaríamos en la blockchain si el usuario ha recibido becas
-      // Por ahora simulamos la verificación
+      // Aquí verificaríamos en la blockchain el historial
       await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Simulación de verificación de historial
+      const mockHistory = {
+        hasHistory: true,
+        paymentsOnTime: 2, // Ejemplo: 2 pagos a tiempo
+        maxAmount: 300 // 100 inicial + (2 * 100) por pagos a tiempo
+      };
+
       setHasScholarship(true);
-      setScholarshipAmount(1500); // Ejemplo de monto de beca recibida
+      setCreditHistory(mockHistory);
     } catch (error) {
-      console.error('Error verificando historial de becas:', error);
+      console.error('Error verificando elegibilidad:', error);
     }
   };
 
@@ -93,22 +104,26 @@ function RequestLoan({ publicKey }) {
       <div className="loan-container">
         <h2>Solicitud de Micropréstamo Estudiantil</h2>
         
-        <div className="scholarship-status">
-          <h3>Estado de Elegibilidad</h3>
+        <div className="credit-status">
+          <h3>Tu Línea de Crédito</h3>
           <div className="status-card">
             <div className="status-item">
-              <span className="status-label">Beca Recibida:</span>
-              <span className="status-value">${scholarshipAmount}</span>
+              <span className="status-label">Monto Máximo Disponible:</span>
+              <span className="status-value">${creditHistory.maxAmount}</span>
             </div>
             <div className="status-item">
-              <span className="status-label">Estado:</span>
-              <span className="status-badge approved">Aprobado</span>
+              <span className="status-label">Pagos a Tiempo:</span>
+              <span className="status-value">{creditHistory.paymentsOnTime}</span>
             </div>
           </div>
+          <p className="credit-info">
+            Tu límite de crédito aumentará $100 por cada pago realizado a tiempo,
+            hasta un máximo de $1,000.
+          </p>
         </div>
 
         <LoanCalculator 
-          maxAmount={scholarshipAmount * 2}
+          maxAmount={Math.min(creditHistory.maxAmount, 1000)}
           onCalculate={handleLoanCalculation}
         />
 

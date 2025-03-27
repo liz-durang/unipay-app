@@ -1,0 +1,141 @@
+.pay-loan-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.payment-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(45, 50, 80, 0.1);
+}
+
+.loan-details {
+  margin: 2rem 0;
+}
+
+.detail-card {
+  background-color: var(--color-light);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(112, 119, 161, 0.2);
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-item .amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.detail-item .date {
+  color: var(--color-accent);
+}
+
+.detail-item .date.late {
+  color: #e53e3e;
+}
+
+.detail-item.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.payment-instructions {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.wallet-address {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+
+.wallet-address code {
+  font-family: monospace;
+  color: var(--color-primary);
+}
+
+.copy-button {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pay-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.pay-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 50, 80, 0.2);
+}
+
+.pay-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.payment-success {
+  text-align: center;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.payment-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 768px) {
+  .wallet-address {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .copy-button {
+    width: 100%;
+  }
+} 

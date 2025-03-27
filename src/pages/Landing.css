@@ -37,6 +37,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Eliminar o comentar esta línea */
+  /* background-image: url('../assets/images/LogoUni.png'); */
 }
 
 .hero-image img {

@@ -34,7 +34,7 @@ function Landing() {
           </div>
         </div>
         <div className="hero-image animate">
-          <img src="/images/hero-illustration.svg" alt="UniPay Platform" />
+          {/* Aquí agregaremos la imagen después */}
         </div>
       </section>
 
@@ -60,28 +60,28 @@ function Landing() {
         <div className="features-grid">
           <div className="feature-card animate">
             <div className="feature-icon">
-              <img src="/images/security-icon.svg" alt="Seguridad" />
+              {/* Aquí agregaremos el ícono después */}
             </div>
             <h3>Becas Seguras</h3>
             <p>Recibe tus becas de forma segura y transparente a través de la blockchain de Stellar</p>
           </div>
           <div className="feature-card animate">
             <div className="feature-icon">
-              <img src="/images/speed-icon.svg" alt="Rapidez" />
+              {/* Aquí agregaremos el ícono después */}
             </div>
             <h3>Préstamos Rápidos</h3>
             <p>Accede a micropréstamos estudiantiles con procesos simplificados</p>
           </div>
           <div className="feature-card animate">
             <div className="feature-icon">
-              <img src="/images/decentralized-icon.svg" alt="Descentralizado" />
+              {/* Aquí agregaremos el ícono después */}
             </div>
             <h3>Sin Intermediarios</h3>
             <p>Gestiona tus finanzas estudiantiles de manera descentralizada</p>
           </div>
           <div className="feature-card animate">
             <div className="feature-icon">
-              <img src="/images/payment-icon.svg" alt="Pagos" />
+              {/* Aquí agregaremos el ícono después */}
             </div>
             <h3>Pagos Flexibles</h3>
             <p>Programa tus pagos de manera flexible y transparente</p>

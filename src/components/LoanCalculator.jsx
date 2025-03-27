@@ -3,9 +3,10 @@ import './LoanCalculator.css';
 
 function LoanCalculator({ maxAmount, onCalculate }) {
   const [amount, setAmount] = useState(0);
-  const [months, setMonths] = useState(6);
+  const [months, setMonths] = useState(3);
   const interestRate = 3; // 3% anual fijo
   const openingFee = 1; // 1% de comisión por apertura
+  const monthOptions = [2, 3, 4, 5, 6];
 
   useEffect(() => {
     calculateLoan();
@@ -73,13 +74,17 @@ function LoanCalculator({ maxAmount, onCalculate }) {
         <div className="form-group">
           <label htmlFor="months">Plazo (meses)</label>
           <div className="months-options">
-            {[6, 12, 18, 24].map((option) => (
+            {monthOptions.map((option) => (
               <button
                 key={option}
                 className={`month-option ${months === option ? 'selected' : ''}`}
                 onClick={() => setMonths(option)}
               >
-                {option}
+                <span className="month-number">{option}</span>
+                <span className="month-label">meses</span>
+                <span className="payment-estimate">
+                  ${((amount * (1 + (interestRate/100))) / option).toFixed(2)}/mes
+                </span>
               </button>
             ))}
           </div>

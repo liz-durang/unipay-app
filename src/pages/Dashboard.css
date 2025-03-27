@@ -1,0 +1,142 @@
+.dashboard-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.dashboard-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(45, 50, 80, 0.1);
+  transition: var(--transition);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(45, 50, 80, 0.15);
+}
+
+.balance {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.balance-amount {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 1rem 0;
+}
+
+.balance-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.action-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(246, 177, 122, 0.2);
+}
+
+.next-payment {
+  text-align: center;
+}
+
+.payment-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin: 1rem 0;
+}
+
+.payment-date {
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.pay-now-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.pay-now-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 50, 80, 0.2);
+}
+
+.scholarship-list,
+.loan-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scholarship-item,
+.loan-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.scholarship-amount,
+.loan-amount {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.scholarship-info,
+.loan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.status.aprobada {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+.status.recibida {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+} 

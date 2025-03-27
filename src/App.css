@@ -18,3 +18,571 @@
 }
 
 /* Eliminar todos los demás estilos que no se usan */
+
+:root {
+  /* Tema claro */
+  --color-background: #ffffff;
+  --color-text: #1a202c;
+  --color-primary: #2d3748;
+  --color-secondary: #7077a1;
+  --color-light: #f7fafc;
+  --color-white: #ffffff;
+  --color-highlight: #f6b17a;
+  --color-accent: #4a5568;
+}
+
+.dark-mode {
+  /* Actualizar/agregar variables de color */
+  --color-background: #1a202c;
+  --color-text: #e2e8f0;
+  --color-primary: #F6B17A;      /* Actualizado para botones */
+  --color-secondary: #a0aec0;
+  --color-light: #2d3748;
+  --color-white: #1a202c;
+  --color-highlight: #F6B17A;
+  --color-accent: #424769;       /* Nuevo color para texto en botones */
+  --color-button-text: #424769;  /* Nuevo color específico para texto en botones */
+}
+
+/* Estilos para el Dashboard y páginas principales */
+.dark-mode .section-title,
+.dark-mode .feature-card h3,
+.dark-mode .step-content h3 {
+  color: #e2e8f0;
+}
+
+.dark-mode .subtitle,
+.dark-mode .feature-card p,
+.dark-mode .step-content p {
+  color: #a0aec0;
+}
+
+/* Botones principales */
+.dark-mode .cta-button,
+.dark-mode .action-button,
+.dark-mode .submit-button,
+.dark-mode button[type="submit"] {
+  background-color: #F6B17A;
+  color: #424769;
+  border: none;
+}
+
+.dark-mode .cta-button:hover,
+.dark-mode .action-button:hover,
+.dark-mode .submit-button:hover,
+.dark-mode button[type="submit"]:hover {
+  background-color: #f7c297;
+  transform: translateY(-2px);
+}
+
+/* Sección "¿Por qué elegir UniPay?" */
+.dark-mode .features-grid {
+  background-color: #1a202c;
+}
+
+.dark-mode .feature-card {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+/* Sección "¿Cómo funciona?" */
+.dark-mode .steps {
+  background-color: #1a202c;
+}
+
+.dark-mode .step {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode .step-number {
+  background-color: #F6B17A;
+  color: #424769;
+}
+
+/* Formularios y campos de entrada */
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  color: #e2e8f0;
+}
+
+.dark-mode input:focus,
+.dark-mode select:focus,
+.dark-mode textarea:focus {
+  border-color: #F6B17A;
+  box-shadow: 0 0 0 2px rgba(246, 177, 122, 0.2);
+}
+
+/* Tablas en TransactionHistory */
+.dark-mode table {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode th {
+  background-color: #424769;
+  color: #e2e8f0;
+}
+
+.dark-mode td {
+  color: #e2e8f0;
+  border-bottom: 1px solid #4a5568;
+}
+
+.dark-mode tr:hover {
+  background-color: #374151;
+}
+
+/* Paginación */
+.dark-mode .pagination-button {
+  background-color: #F6B17A;
+  color: #424769;
+}
+
+.dark-mode .pagination-button:disabled {
+  background-color: #4a5568;
+  color: #a0aec0;
+}
+
+/* Cards y contenedores */
+.dark-mode .card,
+.dark-mode .container {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+/* Estadísticas y números */
+.dark-mode .stat-item h3 {
+  color: #F6B17A;
+}
+
+.dark-mode .stat-item p {
+  color: #e2e8f0;
+}
+
+/* Modales */
+.dark-mode .modal-content {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode .modal-header {
+  border-bottom: 1px solid #4a5568;
+}
+
+.dark-mode .modal-footer {
+  border-top: 1px solid #4a5568;
+}
+
+/* Mensajes de estado y alertas */
+.dark-mode .success-message {
+  background-color: #065f46;
+  color: #e2e8f0;
+}
+
+.dark-mode .error-message {
+  background-color: #7f1d1d;
+  color: #e2e8f0;
+}
+
+/* Tooltips y ayudas */
+.dark-mode .tooltip {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+/* Calendario y fechas */
+.dark-mode .calendar-container {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode .calendar-day {
+  color: #e2e8f0;
+}
+
+.dark-mode .calendar-day.selected {
+  background-color: #F6B17A;
+  color: #424769;
+}
+
+/* Ajustes específicos para modo oscuro */
+.dark-mode .navbar {
+  background-color: #1a202c;      /* Más oscuro para el navbar */
+  border-bottom: 1px solid #2d3748;
+}
+
+.dark-mode .nav-link {
+  color: #e2e8f0;                 /* Texto claro para links */
+}
+
+.dark-mode .nav-link:hover {
+  color: var(--color-highlight);
+}
+
+.dark-mode .dropdown-menu,
+.dark-mode .notifications-menu,
+.dark-mode .wallet-menu,
+.dark-mode .language-menu {
+  background-color: #1a202c;      /* Fondo oscuro para menús */
+  border: 1px solid #2d3748;      /* Borde visible */
+}
+
+.dark-mode .dropdown-item,
+.dark-mode .notification-item,
+.dark-mode .wallet-action {
+  color: #e2e8f0;                 /* Texto claro para items */
+}
+
+.dark-mode .dropdown-item:hover,
+.dark-mode .notification-item:hover {
+  background-color: #2d3748;      /* Fondo más claro al hover */
+  color: var(--color-highlight);
+}
+
+.dark-mode .connect-wallet-btn.connected {
+  background-color: #2d3748;      /* Fondo más claro para el botón */
+  color: #e2e8f0;                 /* Texto claro */
+  border: 1px solid #4a5568;      /* Borde visible */
+}
+
+.dark-mode .connect-wallet-btn.connected:hover {
+  background-color: #374151;      /* Más claro al hover */
+}
+
+.dark-mode .wallet-label,
+.dark-mode .notification-date {
+  color: #a0aec0;                 /* Gris claro para texto secundario */
+}
+
+.dark-mode .wallet-full-address {
+  color: var(--color-highlight);  /* Naranja para la dirección */
+}
+
+.dark-mode .notification-item.unread {
+  background-color: rgba(246, 177, 122, 0.1);  /* Naranja transparente */
+}
+
+/* Ajustes adicionales para mejor legibilidad */
+.dark-mode .notification-content p {
+  color: #e2e8f0;                 /* Asegurar texto claro en notificaciones */
+}
+
+.dark-mode .language-option {
+  color: #e2e8f0;                 /* Texto claro en opciones de idioma */
+}
+
+.dark-mode .language-option:hover {
+  background-color: #2d3748;      /* Fondo más claro al hover */
+}
+
+.dark-mode .language-option.active {
+  background-color: var(--color-highlight);
+  color: #1a202c;                 /* Texto oscuro para contraste */
+}
+
+.dark-mode .wallet-action.disconnect {
+  background-color: #7f1d1d;      /* Rojo más oscuro para desconectar */
+  color: #fecaca;                 /* Texto rojo claro */
+}
+
+.dark-mode .wallet-action.disconnect:hover {
+  background-color: #991b1b;      /* Rojo más intenso al hover */
+  color: #fee2e2;
+}
+
+/* Ajustes para el botón de tema */
+.theme-toggle {
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
+}
+
+.dark-mode .theme-toggle {
+  color: #e2e8f0;
+}
+
+/* Estilos específicos para Dashboard */
+.dark-mode .dashboard-page {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+/* Títulos de secciones en Dashboard */
+.dark-mode .dashboard-section h2,
+.dark-mode .recent-scholarships h2,
+.dark-mode .recent-loans h2 {
+  color: #e2e8f0;
+}
+
+/* Cards de becas y préstamos recientes */
+.dark-mode .scholarship-card,
+.dark-mode .loan-card {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode .scholarship-card h3,
+.dark-mode .loan-card h3 {
+  color: #F6B17A;
+}
+
+.dark-mode .scholarship-card p,
+.dark-mode .loan-card p {
+  color: #e2e8f0;
+}
+
+.dark-mode .scholarship-amount,
+.dark-mode .loan-amount {
+  color: #F6B17A;
+  font-size: 1.5rem;  /* Tamaño más grande para los montos */
+  font-weight: bold;
+}
+
+.dark-mode .scholarship-status,
+.dark-mode .loan-status {
+  background-color: #424769;
+  color: #e2e8f0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+}
+
+/* Estadísticas del Dashboard */
+.dark-mode .dashboard-stats {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+.dark-mode .stat-value {
+  color: #F6B17A;
+}
+
+.dark-mode .stat-label {
+  color: #e2e8f0;
+}
+
+/* Botones en el Dashboard */
+.dark-mode .dashboard-actions button,
+.dark-mode .view-all-button {
+  background-color: #F6B17A;
+  color: #424769;
+  border: none;
+}
+
+.dark-mode .dashboard-actions button:hover,
+.dark-mode .view-all-button:hover {
+  background-color: #f7c297;
+  transform: translateY(-2px);
+}
+
+/* Estado de las becas/préstamos */
+.dark-mode .status-pending {
+  background-color: #F6B17A;
+  color: #ffffff;     /* Texto blanco para mejor contraste */
+  font-weight: 500;
+}
+
+.dark-mode .status-approved {
+  background-color: #059669;  /* Verde más vibrante */
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.dark-mode .status-received {
+  background-color: #424769;
+  color: #ffffff;     /* Texto blanco */
+  font-weight: 500;
+}
+
+.dark-mode .status-next-payment {
+  background-color: #424769;
+  color: #ffffff;     /* Texto blanco */
+  font-weight: 500;
+}
+
+.dark-mode .status-rejected {
+  background-color: #dc2626;  /* Rojo más vibrante */
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Información adicional */
+.dark-mode .info-text {
+  color: #a0aec0;
+}
+
+.dark-mode .date-text {
+  color: #a0aec0;
+}
+
+/* Enlaces dentro del Dashboard */
+.dark-mode .dashboard-link {
+  color: #F6B17A;
+}
+
+.dark-mode .dashboard-link:hover {
+  color: #f7c297;
+}
+
+/* Contenedores de secciones */
+.dark-mode .dashboard-section {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+/* Etiquetas y badges */
+.dark-mode .badge {
+  background-color: #424769;
+  color: #e2e8f0;
+}
+
+/* Tooltips en el Dashboard */
+.dark-mode .dashboard-tooltip {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #6b7280;
+}
+
+/* Contenedores de imágenes */
+.dark-mode .image-container {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* Imágenes en el Landing */
+.dark-mode .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Imágenes en las cards */
+.dark-mode .feature-card img,
+.dark-mode .scholarship-card img,
+.dark-mode .loan-card img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: #1a202c;
+  border: 2px solid #F6B17A;
+}
+
+/* Iconos en el dashboard */
+.dark-mode .dashboard-icon {
+  width: 32px;
+  height: 32px;
+  color: #F6B17A;
+}
+
+/* Logos */
+.dark-mode .logo-container {
+  background-color: transparent;
+  padding: 1rem;
+}
+
+.dark-mode .logo-container img {
+  max-height: 50px;
+  filter: brightness(1.2); /* Hace el logo un poco más brillante en modo oscuro */
+}
+
+/* Avatares de usuario */
+.dark-mode .user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #F6B17A;
+  background-color: #2d3748;
+}
+
+/* Imágenes de fondo */
+.dark-mode .background-image {
+  opacity: 0.8; /* Reduce la opacidad en modo oscuro */
+  filter: brightness(0.8) contrast(1.2);
+}
+
+/* Galería de imágenes */
+.dark-mode .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.dark-mode .gallery-item {
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Placeholder para imágenes */
+.dark-mode .image-placeholder {
+  background-color: #2d3748;
+  border: 2px dashed #4a5568;
+  border-radius: var(--border-radius);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0aec0;
+}
+
+/* Zoom de imágenes */
+.dark-mode .zoomable-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .zoomable-image.zoomed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 1000;
+  cursor: zoom-out;
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  background-color: rgba(26, 32, 44, 0.9);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
