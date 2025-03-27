@@ -7,7 +7,7 @@ import walletIcon from '../assets/images/icons/wallet.svg';
 import chartIcon from '../assets/images/icons/chart.svg';
 import userIcon from '../assets/images/icons/user.svg';
 import studentImage from '../assets/images/content/student.jpg';
-import partnersImage from '../assets/images/content/partners.png';
+import partnersImage from '../assets/images/content/partners.svg';
 
 // Función auxiliar para manejar imágenes faltantes
 const handleImageError = (e) => {
@@ -143,28 +143,54 @@ function Landing() {
       <section className="social-proof">
         <h2 className="section-title animate">Respaldado por</h2>
         <div className="partners-grid animate">
-          <img 
-            src={partnersImage} 
-            alt="Partners" 
-            className="partners-image"
-            onError={handleImageError}
-          />
+          <div className="partner-card">
+            <img src={partnersImage} alt="Universidad Nacional" className="partner-logo" />
+            <h3>Universidad Nacional</h3>
+            <p>Institución Educativa Líder</p>
+          </div>
+          <div className="partner-card">
+            <img src={partnersImage} alt="Stellar Foundation" className="partner-logo" />
+            <h3>Stellar Foundation</h3>
+            <p>Tecnología Blockchain</p>
+          </div>
+          <div className="partner-card">
+            <img src={partnersImage} alt="Banco Nacional" className="partner-logo" />
+            <h3>Banco Nacional</h3>
+            <p>Institución Financiera</p>
+          </div>
+          <div className="partner-card">
+            <img src={partnersImage} alt="Tech Innovation" className="partner-logo" />
+            <h3>Tech Innovation</h3>
+            <p>Desarrollo Tecnológico</p>
+          </div>
+          <div className="partner-card">
+            <img src={partnersImage} alt="Global Education" className="partner-logo" />
+            <h3>Global Education</h3>
+            <p>Educación Internacional</p>
+          </div>
         </div>
-        <div className="testimonials">
-          <div className="testimonial-card animate">
-            <p>"UniPay me ayudó a financiar mi carrera de manera rápida y segura"</p>
-            <div className="testimonial-author">
-              <img 
-                src={studentImage} 
-                alt="Student" 
-                className="author-image"
-                onError={handleImageError}
-              />
-              <div className="author-info">
-                <h4>Ana García</h4>
-                <p>Estudiante de Ingeniería</p>
-              </div>
-            </div>
+
+        {/* Reemplazamos testimonios por estadísticas */}
+        <div className="stats-grid animate">
+          <div className="stat-card">
+            <div className="stat-icon">📈</div>
+            <div className="stat-number">95%</div>
+            <div className="stat-label">Tasa de Aprobación</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">🎓</div>
+            <div className="stat-number">10K+</div>
+            <div className="stat-label">Estudiantes Activos</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">🌎</div>
+            <div className="stat-number">50+</div>
+            <div className="stat-label">Universidades Asociadas</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-icon">💰</div>
+            <div className="stat-number">$5M+</div>
+            <div className="stat-label">En Financiamiento</div>
           </div>
         </div>
       </section>
